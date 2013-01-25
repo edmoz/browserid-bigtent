@@ -22,7 +22,8 @@ realm = util.format("%s/", hostname);
 // Register the YahooStrategy with Passport.
 var strategy = new YahooStrategy({
     returnURL: return_url,
-    realm: realm
+    realm: realm,
+    stateless: true
   },
   function(identifier, profile, done) {
     return done(null, profile);
